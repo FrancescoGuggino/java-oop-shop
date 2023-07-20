@@ -70,4 +70,16 @@ public class Prodotto {
                 ", iva=" + iva +
                 '}';
     }
+
+    //metodo prezzo base
+
+    public double getPrezzoBase(){
+        return prezzo;
+    }
+
+    //metodo prezzo con iva
+
+    public double getPrezzoIva() {
+        return iva
+    }
 }
