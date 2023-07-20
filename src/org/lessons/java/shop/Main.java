@@ -24,5 +24,7 @@ public class Main {
 
         System.out.println(prodotto.getPrezzoBase());
         System.out.println(prodotto.getPrezzoIva());
+
+        System.out.println("id del prodotto: " + prodotto.getNomeCodice());
     }
 }

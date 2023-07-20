@@ -86,4 +86,18 @@ public class Prodotto {
     public double getPrezzoIva() {
         return prezzo + (prezzo*iva/100);
     }
+
+    public String getNomeCodice () {
+        String nomeCodice = getPadCode()+ "-" + nome;
+        return nomeCodice;
+    }
+
+    private String getPadCode() {
+        String codice = String.valueOf(this.codice);
+        while (codice.length() < 8) {
+            codice = "0" + codice;
+
+        }
+        return codice;
+    }
 }
