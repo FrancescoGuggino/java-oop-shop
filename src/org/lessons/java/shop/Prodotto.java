@@ -1,5 +1,7 @@
 package org.lessons.java.shop;
 
+import java.util.Random;
+
 public class Prodotto {
 
     // campi
@@ -11,8 +13,10 @@ public class Prodotto {
 
     // costruttore
 
-    public Prodotto(int codice, String nome, String descrizione, double prezzo, double iva) {
-        this.codice = codice;
+    public Prodotto( String nome, String descrizione, double prezzo, double iva) {
+        Random random = new Random();
+        int randomNumber = random.nextInt(99999999);
+        this.codice = randomNumber ;
         this.nome = nome;
         this.descrizione = descrizione;
         this.prezzo = prezzo;
@@ -80,6 +84,6 @@ public class Prodotto {
     //metodo prezzo con iva
 
     public double getPrezzoIva() {
-        return prezzo - (prezzo*iva/100);
+        return prezzo + (prezzo*iva/100);
     }
 }
