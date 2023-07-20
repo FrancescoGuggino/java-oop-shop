@@ -80,6 +80,6 @@ public class Prodotto {
     //metodo prezzo con iva
 
     public double getPrezzoIva() {
-        return iva
+        return prezzo - (prezzo*iva/100);
     }
 }
